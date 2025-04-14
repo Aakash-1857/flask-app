@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Search</title>
+  <style>
+    /* Reset & Base Styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #121212, #1f1f1f);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      color: #e0e0e0;
+    }
+
+    .container {
+      background-color: #2a2a2a;
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #ffffff;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 10px;
+      color: #cccccc;
+      text-align: left;
+    }
+
+    .search-bar {
+      width: 100%;
+      padding: 12px 15px;
+      font-size: 1rem;
+      background-color: #1e1e1e;
+      color: #f1f1f1;
+      border: 1px solid #444;
+      border-radius: 8px;
+      transition: border-color 0.3s ease, background-color 0.3s ease;
+    }
+
+    .search-bar:focus {
+      outline: none;
+      border-color: #007BFF;
+      background-color: #2c2c2c;
+    }
+
+    .submit-btn {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #007BFF;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #0056b3;
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>🎬 Movie Search</h1>
+    <form action="/search" method="POST">
+      <label for="movie">Enter movie name:</label>
+      <input
+        type="text"
+        class="search-bar"
+        id="movie"
+        name="movie_name"
+        placeholder="e.g. Inception, Avatar..."
+        required
+      />
+      <button type="submit" class="submit-btn">Search</button>
+    </form>
+  </div>
+
+</body>
+</html>
